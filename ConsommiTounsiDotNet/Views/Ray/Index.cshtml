@@ -1,0 +1,73 @@
+﻿@model IEnumerable<ConsommiTounsiDotNet.Models.Ray>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutFront.cshtml";
+
+}
+
+<!-- banner-2 -->
+
+<!-- //banner-2 -->
+<figure class="product-image">
+    <iframe src="https://momento360.com/e/u/6a4278666cc74761adf1db390d5eeccc?utm_campaign=embed&utm_source=other&heading=187.8&pitch=-19.2&field-of-view=75&size=medium"
+            width="1590" height="450">
+    </iframe>
+</figure>
+<!-- page -->
+<div class="services-breadcrumb">
+    <div class="agile_inner_breadcrumb">
+        <div class="container">
+            <ul class="w3_short">
+                <li>
+                    <a href="index ">Home</a>
+                    <i>|</i>
+                </li>
+                <li>Rayons</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+@*<p>
+        @Html.ActionLink("Create New", "Create")
+    </p>*@
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idRay)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nom_rayon)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.capacity)
+        </th>
+
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idRay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nom_rayon)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.capacity)
+            </td>
+
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { idRay = item.idRay }) |
+                @Html.ActionLink("Details", "Details", new { idRay = item.idRay }) |
+                @Html.ActionLink("Delete", "Delete", new { idRay = item.idRay })
+            </td>
+        </tr>
+    }
+
+
+</table>

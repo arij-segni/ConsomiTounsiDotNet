@@ -1,0 +1,69 @@
+﻿@model IEnumerable<ConsommiTounsiDotNet.Models.Stock>
+
+@{
+    ViewBag.Title = "MissingProduct";
+}
+
+<h2>MissingProduct</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idStock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nom_stock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quantite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.validite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.remise)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prixdevente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prixremise)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idStock)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.nom_stock)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.quantite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.validite)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.remise)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prixdevente)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.prixremise)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,74 @@
+﻿@model ConsommiTounsiDotNet.Models.Stock
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Stock</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idStock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idStock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.nom_stock)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.nom_stock)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.quantite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.quantite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.validite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.validite)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.remise)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.remise)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prixdevente)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prixdevente)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.prixremise)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.prixremise)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new {  /*idRay= Model.idRay*/ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,91 @@
+﻿@model IEnumerable<ConsommiTounsiDotNet.Models.Stock>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutFront.cshtml";
+
+}
+<figure class="product-image">
+    <iframe src="~/dist/img/R8RWM5.jpg"
+            width="1590" height="450">
+    </iframe>
+</figure>
+
+<!-- page -->
+<div class="services-breadcrumb">
+    <div class="agile_inner_breadcrumb">
+        <div class="container">
+            <ul class="w3_short">
+                <li>
+                    <a href="index ">Home</a>
+                    <i>|</i>
+                </li>
+                <li>Stocks</li>
+            </ul>
+        </div>
+
+    </div>
+</div>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idStock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.nom_stock)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.quantite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.validite)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.remise)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prixdevente)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.prixremise)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.idStock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nom_stock)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.quantite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.validite)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.remise)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prixdevente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.prixremise)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { idStock = item.idStock }) |
+                @Html.ActionLink("Details", "Details", new { idStock = item.idStock }) |
+                @Html.ActionLink("Delete", "Delete", new { idStock = item.idStock })
+            </td>
+        </tr>
+    }
+
+</table>

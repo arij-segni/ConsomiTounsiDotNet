@@ -1,0 +1,387 @@
+﻿@model IEnumerable<ConsommiTounsiDotNet.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutFront.cshtml";
+    @*Layout = null;
+    *@}
+
+<!-- banner-2 -->
+<div class="page-head_agile_info_w3l">
+
+</div>
+<!-- //banner-2 -->
+<!-- page -->
+<div class="services-breadcrumb">
+    <div class="agile_inner_breadcrumb">
+        <div class="container">
+            <ul class="w3_short">
+                <li>
+                    <a href="@Url.Action("Index")   ">Home</a>
+                    <i>|</i>
+                </li>
+                <li>All Products</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div class="ads-grid">
+    <div class="container">
+        <h3 class="tittle-w3l">
+            All Products
+            <span class="heading-style">
+                <i></i>
+                <i></i>
+                <i></i>
+            </span>
+        </h3>
+
+
+        <!-- product left -->
+        <div class="side-bar col-md-3">
+            <div class="search-hotel">
+                <h3 class="agileits-sear-head">Search Here..</h3>
+                <form action="#" method="post">
+                    <input type="search" placeholder="Product name..." name="search" required="">
+                    <input type="submit" value=" ">
+                </form>
+            </div>
+            <!-- price range -->
+            <div class="range">
+                <h3 class="agileits-sear-head">Price range</h3>
+                <ul class="dropdown-menu6">
+                    <li>
+
+                        <div id="slider-range"></div>
+                        <input type="text" id="amount" style="border: 0; color: #ffffff; font-weight: normal;" />
+                    </li>
+                </ul>
+            </div>
+            <!-- //price range -->
+            <!-- food preference -->
+            <div class="left-side">
+                <h3 class="agileits-sear-head">Food Preference</h3>
+                <ul>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">Vegetarian</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">Non-Vegetarian</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- //food preference -->
+            <!-- discounts -->
+            <div class="left-side">
+                <h3 class="agileits-sear-head">Discount</h3>
+                <ul>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">5% or More</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">10% or More</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">20% or More</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">30% or More</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">50% or More</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">60% or More</span>
+                    </li>
+                </ul>
+            </div>
+            <!-- //discounts -->
+            <!-- reviews -->
+            <div class="customer-rev left-side">
+                <h3 class="agileits-sear-head">Customer Review</h3>
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <span>5.0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                            <span>4.0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                            <span>3.5</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                            <span>3.0</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star" aria-hidden="true"></i>
+                            <i class="fa fa-star-half-o" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                            <i class="fa fa-star-o" aria-hidden="true"></i>
+                            <span>2.5</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- //reviews -->
+            <!-- cuisine -->
+            <div class="left-side">
+                <h3 class="agileits-sear-head">Cuisine</h3>
+                <ul>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">South American</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">French</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">Greek</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">Chinese</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">Japanese</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">Italian</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">Mexican</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">Thai</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span">Indian</span>
+                    </li>
+                    <li>
+                        <input type="checkbox" class="checked">
+                        <span class="span"> Spanish </span>
+                    </li>
+                </ul>
+            </div>
+            <!-- //cuisine -->
+            <!-- deals -->
+            <div class="deal-leftmk left-side">
+                <h3 class="agileits-sear-head">Special Deals</h3>
+                <div class="special-sec1">
+                    <div class="col-xs-4 img-deals">
+                        <img src="~/shopping/images/d2.jpg" alt="">
+                    </div>
+                    <div class="col-xs-8 img-deal1">
+                        <h3>Lay's Potato Chips</h3>
+                        <a href="">$18.00</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="special-sec1">
+                    <div class="col-xs-4 img-deals">
+                        <img src="~/shopping/images/d1.jpg" alt="">
+                    </div>
+                    <div class="col-xs-8 img-deal1">
+                        <h3>Bingo Mad Angles</h3>
+                        <a href="">$9.00</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="special-sec1">
+                    <div class="col-xs-4 img-deals">
+                        <img src="~/shopping/images/d4.jpg" alt="">
+                    </div>
+                    <div class="col-xs-8 img-deal1">
+                        <h3>Tata Salt</h3>
+                        <a href="">$15.00</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="special-sec1">
+                    <div class="col-xs-4 img-deals">
+                        <img src="~/shopping/images/d5.jpg" alt="">
+                    </div>
+                    <div class="col-xs-8 img-deal1">
+                        <h3>Gujarat Dry Fruit</h3>
+                        <a href="">$525.00</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="special-sec1">
+                    <div class="col-xs-4 img-deals">
+                        <img src="~/shopping/images/d3.jpg" alt="">
+                    </div>
+                    <div class="col-xs-8 img-deal1">
+                        <h3>Cadbury Dairy Milk</h3>
+                        <a href="">$149.00</a>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <!-- //deals -->
+        </div>
+        <!-- //product left -->
+        <!-- //tittle heading -->
+
+        <style>
+            table, th, td {
+                border: 1px solid #13e0fc;
+                vertical-align: middle;
+            }
+
+            img {
+            }
+
+            th, td {
+                text-align: center;
+                vertical-align: middle;
+            }
+        </style>
+
+        <div class="agileinfo-ads-display col-md-offset-5 w3l-rightpro">
+            <div class="wrapper">
+
+                <p>
+                    @Html.ActionLink("Show my cart", "myCart")
+                </p>
+
+                <table class="table table-striped table-responsive" width: 20px;">
+                    <tr>
+                        <th>
+                            <h3 class="agileits-sear-head">
+                                @Html.DisplayNameFor(model => model.name)
+                            </h3>
+                        </th>
+                        <th>
+                            <h3 class="agileits-sear-head">
+                                @Html.DisplayNameFor(model => model.price)
+                            </h3>
+                        </th>
+                        <th>
+                            <h3 class="agileits-sear-head" >
+                            image
+                            </h3>
+                        </th>
+                        <th>
+                            <h3 class="agileits-sear-head">
+                            Quantity
+                            </h3>
+                        </th>
+                        <th></th>
+                    </tr>
+
+
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+
+                                <h3 >
+                                    @Html.DisplayFor(modelItem => item.name)
+                                </h3>
+                            </td>
+                            <td>
+                                <h3 >
+                                    @Html.DisplayFor(modelItem => item.price)
+                                </h3>
+                            </td>
+                            <td>
+                                <h1>
+                                    <img src="~/shopping/images/a1.jpg" />
+                                </h1>
+                            </td>
+
+
+
+
+                            <td>
+
+                                @using (Html.BeginForm("addToCart", "Product", new { idprod = item.id, quantity = @Request.Form["quantity1"] }, FormMethod.Post))
+
+                                {
+
+                                    @*            <input type="submit" value="Create" formaction="@Url.Action("showBarerr")" formmethod="post" class="btn btn-default" />
+                                    *@
+
+                                    <!--@Html.ActionLink("addToCart", "Product", new { id = item.id, quantity = 2 })-->
+                                    @*            @Html.ActionLink("add to cart", "addToCart", new { id = item.id }, new { id = 1 }) |
+                                    *@
+
+                                    <!--@Html.ActionLink("Details", "Details", new { id = item.id }) |-->
+                                    @* @Html.ActionLink("Delete", "Delete", new { id=item.id }) *@
+
+
+                                    <form @*action="/action_page.php"*@>
+                                        <asp:TextBox ID="quantity1" runat="server" />
+                                        @*@Html.TextBox("quantity1")*@
+                                        <label for="quantity1">Quantity:</label>
+                                        <input type="number" id="quantity1" name="quantity1" min="-100" max="100">
+                                        @*<input type="button
+                                            value="@Request.Form["Qyatity"]">*@
+                                    </form>
+                                    <td>
+
+                                        <button type="submit" class="pull-right"><i class="fa fa-shopping-cart" onclick="alert('added to cart')"></i></button>
+
+                                    </td>
+                                    }
+                            </td>
+                        </tr>
+                    }
+
+                </table>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

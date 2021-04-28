@@ -1,0 +1,45 @@
+﻿
+@model ConsommiTounsiDotNet.Models.JwtRequest
+@{
+    ViewBag.Title = "_login";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="container">
+    <!-- footer first section -->
+    <div <p class="footer-main">
+        <span>
+            <span>
+                <div>
+                    <ul>
+                        <div class="col-md-offset-0 ">
+
+                            @using (Html.BeginForm())
+                            {<form action="@Url.Action("showBarerr", "JwtRequest")" method="post">
+                                    <div class="styled-input agile-styled-input-top">
+                                        @*<input type="text" placeholder="User Name" name="Name" required="">*@
+                                        @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control", placeholder = "user name" } })
+                                        @*@Html.TextBoxFor(model => model.username, new { @class = "form-control form-control-lg", placeholder = "user name" })*@
+                                        @* @Html.ValidationMessageFor(model => model.username, "User Name", new { @class = "text-danger" })*@
+                                    </div>
+                                    <div class="styled-input">
+                                        @*<input type="password" placeholder="Password" name="password" required="">*@
+                                        @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control", placeholder = "password" } })
+                                        @* @Html.ValidationMessageFor(model => model.password, "password", new { @class = "text-danger" })*@
+                                    </div>
+                                    @*<input type="submit" value="Sign In">*@
+                                    <input type="submit" value="Sign in" formaction="@Url.Action("showBarerr", "JwtRequest")" formmethod="post" class="btn btn-default" />
+                                    @*<a href="@Url.Action("showBarerr", "JwtRequest")" class="elements" class="btn btn-default">*@
+
+                                </form>
+                            }
+                        </div>
+
+
+                    </ul>
+</div>
+
+            </span>
+    </p>
+</div>

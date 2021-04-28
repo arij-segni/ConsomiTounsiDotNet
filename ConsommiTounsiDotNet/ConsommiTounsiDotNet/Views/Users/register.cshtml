@@ -1,0 +1,83 @@
+﻿@model ConsommiTounsiDotNet.Models.Users
+
+<div class="container">
+    <!-- footer first section -->
+   <div <p class="footer-main">
+        <span>
+
+            @using (Html.BeginForm())
+            {
+                @Html.AntiForgeryToken()
+
+
+
+
+                <div class="form-horizontal">
+                    <h4>Register</h4>
+                    <hr />
+                    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                    <div class="form-group">
+                        @*@Html.LabelFor(model => model.name, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control" ,placeholder = "name" } })
+                            @Html.ValidationMessageFor(model => model.username, "", new { @class = "text-danger" })
+@*                            @Html.EditorFor(model => model.username, new { htmlAttributes = new { @class = "form-control", placeholder = "user name" } })
+*@                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @*@Html.LabelFor(model => model.lastName, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.lastName, new { htmlAttributes = new { @class = "form-control" ,placeholder = "last name" } })
+                            @Html.ValidationMessageFor(model => model.lastName, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                       @* @Html.LabelFor(model => model.addresse, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.addresse, new { htmlAttributes = new { @class = "form-control" ,placeholder = "your adresse" } })
+                            @Html.ValidationMessageFor(model => model.addresse, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @*@Html.LabelFor(model => model.sexe, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.sexe, new { htmlAttributes = new { @class = "form-control" ,placeholder = "gender" } })
+                            @Html.ValidationMessageFor(model => model.sexe, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @*@Html.LabelFor(model => model.email, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.email, new { htmlAttributes = new { @class = "form-control" ,placeholder = "email" } })
+                            @Html.ValidationMessageFor(model => model.email, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        @*@Html.LabelFor(model => model.password, htmlAttributes: new { @class = "control-label col-md-2" })*@
+                        <div class="col-md-10">
+                            @Html.EditorFor(model => model.password, new { htmlAttributes = new { @class = "form-control" ,placeholder = "passwod" } })
+                            @Html.ValidationMessageFor(model => model.password, "", new { @class = "text-danger" })
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="col-md-offset-1 col-md-10">
+                            <input type="submit" value="Register" formaction="@Url.Action("Create")" formmethod="post" class="agileits_search" />
+                        </div>
+                    </div>
+                </div>
+            }
+
+            <div>
+                @Html.ActionLink("Back to home page", "Index")
+            </div>
+
+
+        </span>
+    </p>
+</div>
